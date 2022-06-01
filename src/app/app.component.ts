@@ -6,11 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  name = 'Harsh';
-  input = '';
-
-  getName(value) {
-    console.log(value);
-    this.input = value;
+  value = 0;
+  counter(data) {
+    if (data == 'add') {
+      this.value++;
+    } else {
+      if (this.value === 0) {
+        return;
+      }
+      this.value--;
+    }
   }
 }
