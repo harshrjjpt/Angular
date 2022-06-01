@@ -7,7 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   name = 'Harsh';
+  input = '';
+
   getName(value) {
     console.log(value);
+    this.input = value;
   }
 }
